@@ -1,0 +1,118 @@
+html,
+body {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: 'Quicksand', sans-serif;
+	text-align: center;
+}
+
+.navbar-header {
+	color: white;
+}
+
+li.user {
+	font-weight: bold;
+}
+
+.logo {
+	max-width: 100%;
+	padding: 10px;
+}
+
+.model {
+	max-width: 100%;
+	padding: 5px;
+}
+
+#sign-out {
+	color: white;
+	position: fixed;
+	right: 10px;
+	top: 5px;
+}
+
+#main {
+	width: 100%;
+}
+
+#map {
+	background: gray;
+	height: 375px;
+	width: 100%;
+	border: 1px solid black;
+	display: inline-block;
+	margin: 0;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+#message-board-container {
+	display: none;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+
+.fa {
+  cursor: pointer;
+  padding-left: 3px;
+}
+
+footer {
+	padding: 10px;
+}
+ 
+#sign-in-container,
+#main {
+  display: none;
+}
+
+@media handheld, only screen and (max-width: 767px) {
+
+body {
+    text-align: center;
+    align-content: center;
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+#map {
+	background: gray;
+	border: 1px solid black;
+	height: 300px;
+	width: 300px;
+	display: inline-block;
+}
+
+.model {
+	max-width: 115%;
+}
+
+.logo {
+	max-width: 100%;
+	padding: 10px;
+}
+
+#message-board-container, 
+#sign-in-container,
+#main {
+  display: none;
+}
+
+.fa {
+  cursor: pointer;
+  padding-left: 3px;
+}
+
+}
+
+#message-board-container {
+	display: none;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}

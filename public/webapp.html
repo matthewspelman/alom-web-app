@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>alom</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="shortcut icon" href="http://www.iconj.com/ico/6/f/6f2trdvpcg.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header text-danger">
+                <h1>alom</h1>
+            </div>
+            <i id="sign-out" class="fa fa-sign-out" aria-hidden="true"></i>
+        </div>
+    </nav>
+
+   	<div id="sign-in-container">
+    	<h1 class="text-center">Welcome to Alom!</h1>
+    	<div id="firebaseui-auth-container"></div>
+    </div>
+
+    <section id="main">
+    	<p>Let's find you a place to meditate.</p>
+		<div id="map"></div>
+		<p>It's easier than you think. Just remember to breathe.</p>
+	</section>
+	<br>
+
+	<div id="message-board-container" class="container">
+		<div class="panel-group">
+			<div class="panel panel-danger">
+				<div class="panel-heading">Post a message below to share your favorite places to meditate!</div>
+				<div class="panel-body">
+					<form action="" id="message-form">
+						<div class="form-group">
+							<label>Message:</label>
+							<textarea id="message" type="text" class="form-control"></textarea>
+						</div>
+						<button class="btn btn-default">Post to board</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="panel-group">
+			<div class="panel panel-default">
+				<div class="panel-heading">Message Board</div>
+				<div class="panel-body">
+					<ul class="message-board"></ul>
+				</div>
+			</div>
+		</div>
+	</div>		
+	<footer>
+	   	<div class="transparentlogo">
+    		<img class="logo" src="images/meditate logo-01.png" height="150" width="200">
+  		</div>
+	   	<small>© 2018 <a href="index.html">alifeofmeditation.com</a>. Made in NYC. We respect your privacy and will not share your information.</small>
+	</footer>
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+	
+	<!-- Custom Firebase Init -->
+	<script src="js/keys.js"></script>
+
+	<!-- Google API -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyDdHSpXx-Nix760gVlfr9fBnJVX6SVEk"></script>
+
+	<!-- Custom JavaScript -->
+ 	<script src="js/app.js"></script>
+</body>
+</html>
