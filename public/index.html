@@ -14,26 +14,50 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">A Life of Meditation</a>
+  <header>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">A Life of Meditation</a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="https://teespring.com/stores/a-life-of-meditation">Visit our apparel store</a></li>
+            <li><a href="webapp.html">Open web app</a></li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="https://teespring.com/stores/a-life-of-meditation">Visit our apparel store</a></li>
-          <li><a href="webapp.html">Open web app</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <section>
+    </nav>
+  </header>
+  
+   <section>
     <h1>Meditation for wherever you are.</h1>
     <h3>We help you practice meditation based on advanced geolocation technology.</h3>
   </section>
+
   <div class="model-images">
     <img class="model" src="images/img_6623_59.png" height="300" width="400">
+  </div>
+
+  <video autoplay>
+      <source src="movies/lotus.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>
+
+  <div class="container">
+    <img class="mountain" src="images/pexels-photo-974091.jpeg" height="300" width ="1200">
+    <div class="centered">
+      <h4>Cherish the moments of silence.</h4>
+    </div>
+  </div>
+  
+  <div class="clear-mind">
+    <h3>We believe in the power of a clear mind. :)</h3>
+  </div>
+
+  <div class="model-images">
+    <img class="model" src="images/img_6592_42.jpg" height="500" width="400">
   </div>
 
   <div class="transparentlogo">
@@ -44,6 +68,9 @@
     <small>© 2018 alifeofmeditation.com. Made in NYC. We respect your privacy and will not share your information.</small>
   </footer>
 
+  <a href="#" class="back-to-top" style="display: inline;">
+    <i class="fa fa-arrow-circle-up"></i>
+  </a>
   <!--
     This script tag is responsible for bringing JavaScript files into the HTML
 
@@ -53,5 +80,9 @@
   -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="/path/to/lib/jquery.waypoints.min.js"></script>
+  <script src="/path/to/shortcuts/sticky.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="js/index.js"></script>
 </body>
 </html>
