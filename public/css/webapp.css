@@ -1,3 +1,5 @@
+/*This is for the web app */
+
 html,
 body {
 	height: 100%;
@@ -26,21 +28,11 @@ li.user {
 	padding: 10px;
 }
 
-.model {
-	max-width: 100%;
-	padding: 10px;
-	margin: auto;
-}
-
 /* Container holding the image and the text */
 .container {
     position: relative;
     text-align: center;
     color: white;
-}
-
-.mountain {
-	padding: 10px;
 }
 
 .centered {
@@ -80,11 +72,6 @@ li.user {
 	display: inline-block;
 }
 
-.fa {
-  cursor: pointer;
-  padding-left: 3px;
-}
-
 footer {
 	padding: 10px;
 }
@@ -92,51 +79,6 @@ footer {
 #sign-in-container,
 #main {
   display: none;
-}
-
-/*page jump*/
-#return-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.7);
-    width: 50px;
-    height: 50px;
-    display: block;
-    text-decoration: none;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-    border-radius: 35px;
-    display: none;
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-#return-to-top i {
-    color: #fff;
-    margin: 0;
-    position: absolute;
-    left: 16px;
-    top: 13px;
-    font-size: 19px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-#return-to-top: hover {
-    background: rgba(0, 0, 0, 0.9);
-}
-
-#return-to-top:hover i {
-    color: #fff;
-    top: 5px;
 }
 
 @media handheld, only screen and (max-width: 767px) {
@@ -158,26 +100,10 @@ body {
 	display: inline-block;
 }
 
-.model {
-	max-width: 115%;
-}
-
-.logo {
-	max-width: 100%;
-	padding: 10px;
-}
-
 #message-board-container, 
 #sign-in-container,
 #main {
   display: none;
-}
-
-.fa {
-  cursor: pointer;
-  padding-left: 3px;
-}
-
 }
 
 #message-board-container {
@@ -185,4 +111,6 @@ body {
 	margin: 0;
 	padding: 0;
 	display: inline-block;
+}
+
 }

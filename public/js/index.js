@@ -1,6 +1,21 @@
-var sticky = new Waypoint.Sticky({
-  element: $('model-images')[0]
-})
+// This is for the main website page
+
+// Get the video
+var video = document.getElementById("myLotusVideo");
+
+// Get the button
+var btn = document.getElementById("myBtn");
+
+// Pause and play the video, and change the button text
+function myFunction() {
+    if (video.paused) {
+        video.play();
+        btn.innerHTML = "Pause";
+    } else {
+        video.pause();
+        btn.innerHTML = "Play";
+    }
+}
 
 // ===== Scroll to Top ==== //
 $(window).scroll(function() {

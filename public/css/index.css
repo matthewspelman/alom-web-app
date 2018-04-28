@@ -1,0 +1,217 @@
+/*This is for the main website page*/
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: 'Quicksand', sans-serif;
+	text-align: center;
+	/* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+  	overflow-x: hidden;
+	/* Enable scrolling on the page. */
+	overflow-y: auto;
+	/* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+	perspective: 2px;
+}
+
+.section {
+	position: relative;
+}
+
+.parallax::after {
+  /* Display and position the pseudo-element */
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  transform: translateZ(-1px) scale(1.5);
+  /* Force the background image to fill the whole element. */
+  background-size: 100%;
+  /* Keep the image from overlapping sibling elements. */ 
+  z-index: -1;
+}
+
+/* The styling for the static div. */
+.static {
+}
+
+.transparentlogo {
+	max-width: 100%;
+}
+
+.parallax {
+	max-width: 100%;
+}
+
+.model {
+	max-width: 100%;
+	padding: 10px;
+	margin: auto;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myLotusVideo {
+    max-width: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+}
+
+.fa {
+  cursor: pointer;
+  padding-left: 3px;
+}
+
+/*page jump*/
+
+.material-icons {
+		display: block;
+		text-align: center;
+  	text-decoration: none;
+  	color: black;
+}
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: absolute;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#return-to-top: hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+@media handheld, only screen and (max-width: 767px) {
+
+body {
+    text-align: center;
+    align-content: center;
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+.model {
+	max-width: 115%;
+}
+
+.logo {
+	max-width: 100%;
+	padding: 10px;
+}
+
+.fa {
+  cursor: pointer;
+  padding-left: 3px;
+}
+
+/*page jump*/
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: absolute;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#return-to-top: hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+}
