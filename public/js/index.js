@@ -1,5 +1,7 @@
 // This is for the main website page
 
+console.log('My browser is working');
+
 // Get the video
 var video = document.getElementById("myLotusVideo");
 
