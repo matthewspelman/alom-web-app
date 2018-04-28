@@ -47,10 +47,6 @@ body {
 	max-width: 100%;
 }
 
-.parallax {
-	max-width: 100%;
-}
-
 .model {
 	max-width: 100%;
 	padding: 10px;
@@ -60,14 +56,15 @@ body {
 /* Style the video: 100% width and height to cover the entire window */
 #myLotusVideo {
     max-width: 100%;
+    padding: 10px;
+    margin: auto;
 }
 
 /* Add some content at the bottom of the video/page */
 .content {
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    width: 100%;
-    padding: 20px;
+    max-width: 100%;
+    padding: 10px;
+    margin: auto;
 }
 
 /* Style the button used to pause/play the video */
@@ -84,20 +81,6 @@ body {
 #myBtn:hover {
     background: #ddd;
     color: black;
-}
-
-.fa {
-  cursor: pointer;
-  padding-left: 3px;
-}
-
-/*page jump*/
-
-.material-icons {
-		display: block;
-		text-align: center;
-  	text-decoration: none;
-  	color: black;
 }
 
 #return-to-top {
@@ -120,11 +103,10 @@ body {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-
 #return-to-top i {
     color: #fff;
     margin: 0;
-    position: absolute;
+    position: relative;
     left: 16px;
     top: 13px;
     font-size: 19px;
@@ -135,7 +117,7 @@ body {
     transition: all 0.3s ease;
 }
 
-#return-to-top: hover {
+#return-to-top:hover {
     background: rgba(0, 0, 0, 0.9);
 }
 
@@ -164,12 +146,6 @@ body {
 	padding: 10px;
 }
 
-.fa {
-  cursor: pointer;
-  padding-left: 3px;
-}
-
-/*page jump*/
 #return-to-top {
     position: fixed;
     bottom: 20px;
@@ -190,11 +166,10 @@ body {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-
 #return-to-top i {
     color: #fff;
     margin: 0;
-    position: absolute;
+    position: relative;
     left: 16px;
     top: 13px;
     font-size: 19px;
@@ -204,14 +179,13 @@ body {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-
-#return-to-top: hover {
+#return-to-top:hover {
     background: rgba(0, 0, 0, 0.9);
 }
-
 #return-to-top:hover i {
     color: #fff;
     top: 5px;
 }
+
 
 }
