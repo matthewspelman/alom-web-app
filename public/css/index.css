@@ -45,12 +45,11 @@ body {
 }*/
 
 .transparentlogo {
-	max-width: 60%;
+	max-width: 100%;
 }
 
 img.logo {
     display: inline-block;
-    margin-left: 32em;
 }
 
 .model {
@@ -112,7 +111,7 @@ img.logo {
 #return-to-top i {
     color: #fff;
     margin: 0;
-    position: relative;
+    position: absolute;
     left: 16px;
     top: 13px;
     font-size: 19px;
@@ -188,7 +187,7 @@ body {
 #return-to-top i {
     color: #fff;
     margin: 0;
-    position: relative;
+    position: absolute;
     left: 16px;
     top: 13px;
     font-size: 19px;
