@@ -10,6 +10,10 @@ body {
 	text-align: center;
 }
 
+#sign-out-text {
+	color: white;
+}
+
 .stuck {
   position: fixed;
   top: 0;
@@ -17,6 +21,11 @@ body {
 
 .navbar-header {
 	color: white;
+}
+
+.text-center {
+	padding: 5px;
+	padding-bottom: 5px;
 }
 
 li.user {
@@ -50,6 +59,12 @@ li.user {
 	top: 5px;
 }
 
+#sign-out-text {
+	color: white;
+	position: fixed;
+	right: 30px;
+}
+
 #main {
 	width: 100%;
 }
@@ -64,9 +79,8 @@ li.user {
 	padding-left: 2px;
 	padding-right: 2px;
 }
-
+/*removed display: none from below #message-board-container */
 #message-board-container {
-	display: none;
 	margin: 0;
 	padding: 0;
 	display: inline-block;
@@ -76,9 +90,61 @@ footer {
 	padding: 10px;
 }
  
-#sign-in-container,
-#main {
+#sign-in-container {
   display: none;
+}
+
+#main {
+	display: none;
+}
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: absolute;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+a.fa.fa-instagram.fa-lg, a.fa.fa-twitter.fa-lg {
+    color: black;
+    text-decoration: none;
+    padding-bottom: 20px;
 }
 
 @media handheld, only screen and (max-width: 767px) {
@@ -91,6 +157,12 @@ body {
     margin: 0;
     width: 100%;
   }
+
+#sign-out-text {
+	color: white;
+	position: fixed;
+	right: 30px;
+}
 
 #map {
 	background: gray;
@@ -111,6 +183,55 @@ body {
 	margin: 0;
 	padding: 0;
 	display: inline-block;
+}
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: absolute;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+a.fa.fa-instagram.fa-lg, a.fa.fa-twitter.fa-lg {
+    color: black;
+    text-decoration: none;
+    padding-bottom: 20px;
 }
 
 }

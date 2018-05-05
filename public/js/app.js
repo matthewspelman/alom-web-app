@@ -17,8 +17,14 @@ function buildMap(latitude, longitude) {
       lng: longitude,
     },
     zoom: 12,
-  })
-
+  });
+  //comment adding user ability to add markers. New code on lines 22 and 23
+  map.addListener('click', function(e) {
+    placeMarkerAndPanTo(e.latitudeLongitude, map);
+  });
+}
+  //new function on line 27. Still getting error message that I need to further diagnose.
+  function placeMarkerAndPanTo(latitudeLongitude, map) {
   var marker = new google.maps.Marker({
     position: {
       lat: latitude,
@@ -26,6 +32,8 @@ function buildMap(latitude, longitude) {
     },
     map: map,
   });
+  //comment added this line to render markers. Not sure if this will work. 
+  map.panTo(latLng);
 }
 //create an array of objects and pass the array below...
 //this would be pre-selected locations to start off in the database.
@@ -203,9 +211,25 @@ firebase.auth().onAuthStateChanged(function(user) {
   } else {
     $('#sign-in-container').show()
     $('#message-board-container').hide()
+    navigator.geolocation.getCurrentPosition(handleResponse)
+    $('#main').hide()
   }
 })
 
 $('#sign-out').click(function() {
   firebase.auth().signOut()
-})
+});
+
+// ===== Scroll to Top ==== 
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
