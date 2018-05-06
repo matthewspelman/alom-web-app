@@ -79,9 +79,10 @@ li.user {
 	padding-left: 2px;
 	padding-right: 2px;
 }
-/*removed display: none from below #message-board-container */
+
 #message-board-container {
-	margin: 0;
+	display: none;
+    margin: 0;
 	padding: 0;
 	display: inline-block;
 }
@@ -90,12 +91,8 @@ footer {
 	padding: 10px;
 }
  
-#sign-in-container {
+#sign-in-container, #main {
   display: none;
-}
-
-#main {
-	display: none;
 }
 
 #return-to-top {
