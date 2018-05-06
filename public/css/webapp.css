@@ -40,8 +40,8 @@ li.user {
 /* Container holding the image and the text */
 .container {
     position: relative;
-    text-align: center;
-    color: white;
+    text-align: left;
+    color: black;
 }
 
 .centered {
@@ -167,6 +167,13 @@ body {
 	height: 300px;
 	width: 300px;
 	display: inline-block;
+}
+
+/* Container holding the image and the text */
+.container, ul.message-board, div.panel-body {
+    position: relative;
+    text-align: left;
+    color: black;
 }
 
 #message-board-container, 

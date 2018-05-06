@@ -18,21 +18,18 @@ function buildMap(latitude, longitude) {
     },
     zoom: 12,
   });
-  //comment adding user ability to add markers. New code on lines 22 and 23
+  //comment adding user ability to add markers. New code on lines 22 and 23. 
   map.addListener('click', function(e) {
-    placeMarkerAndPanTo(e.latitudeLongitude, map);
+    placeMarkerAndPanTo(e.latLng, map);
   });
 }
-  //new function on line 27. Still getting error message that I need to further diagnose.
-  function placeMarkerAndPanTo(latitudeLongitude, map) {
+  //new function on line 27. 
+function placeMarkerAndPanTo(latLng, map) {
   var marker = new google.maps.Marker({
-    position: {
-      lat: latitude,
-      lng: longitude, 
-    },
-    map: map,
+    position: latLng,
+    map: map
   });
-  //comment added this line to render markers. Not sure if this will work. 
+  //comment added this line to render markers. 
   map.panTo(latLng);
 }
 //create an array of objects and pass the array below...
@@ -51,7 +48,6 @@ function renderMeditationMarkers(places) {
     });
   })
 }
-
 
 var features = [
   {   
@@ -94,11 +90,11 @@ var features = [
 ];
 
 
-
 //chat bot example if I want to integrate somehow
-//https://hubot.github.com/
+//https://hubot.github.com//
 
 //Get a reference to the root of the Firebase Database
+
 var messageAppReference = firebase.database()
 
 $('#message-form').submit(function(event) {
@@ -131,7 +127,7 @@ function getUserMessages() {
       var user = msg.val().user
       var id = msg.key
       // create a <li> element
-      console.log(message, id)
+      console.log(message, user, id)
       var $li = $('<li>').text(message.message + ' - ' + user)
     
       // Create up vote element
@@ -211,7 +207,6 @@ firebase.auth().onAuthStateChanged(function(user) {
   } else {
     $('#sign-in-container').show()
     $('#message-board-container').hide()
-    navigator.geolocation.getCurrentPosition(handleResponse)
     $('#main').hide()
   }
 })
@@ -220,7 +215,7 @@ $('#sign-out').click(function() {
   firebase.auth().signOut()
 });
 
-// ===== Scroll to Top ==== 
+// ===== Scroll to Top ==== //
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
         $('#return-to-top').fadeIn(200);    // Fade in the arrow
@@ -228,6 +223,7 @@ $(window).scroll(function() {
         $('#return-to-top').fadeOut(200);   // Else fade out the arrow
     }
 });
+
 $('#return-to-top').click(function() {      // When arrow is clicked
     $('body,html').animate({
         scrollTop : 0                       // Scroll to top of body
