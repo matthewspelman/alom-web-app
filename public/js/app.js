@@ -17,12 +17,12 @@ function buildMap(latitude, longitude) {
       lng: longitude,
     },
     zoom: 12,
-  });
+  })
   //comment adding user ability to add markers. New code on lines 22 and 23. 
   map.addListener('click', function(e) {
     placeMarkerAndPanTo(e.latLng, map);
-  });
-}
+  })
+
   //new function on line 27. 
 function placeMarkerAndPanTo(latLng, map) {
   var marker = new google.maps.Marker({
@@ -31,7 +31,9 @@ function placeMarkerAndPanTo(latLng, map) {
   });
   //comment added this line to render markers. 
   map.panTo(latLng);
+  }
 }
+
 //create an array of objects and pass the array below...
 //this would be pre-selected locations to start off in the database.
 //MEDITATION MARKERS HERE
@@ -94,7 +96,6 @@ var features = [
 //https://hubot.github.com//
 
 //Get a reference to the root of the Firebase Database
-
 var messageAppReference = firebase.database()
 
 $('#message-form').submit(function(event) {
@@ -120,36 +121,36 @@ function getUserMessages() {
   messageAppReference.ref('messages').on('value', function (results) {
   $('.message-board').empty()
 
-    results.forEach(function (msg) {
-      // "un-wrap" data from firebase using .val()
-      var message = msg.val()
-      var votes = message.votes
-      var user = msg.val().user
-      var id = msg.key
-      // create a <li> element
-      console.log(message, user, id)
-      var $li = $('<li>').text(message.message + ' - ' + user)
+  results.forEach(function (msg) {
+    // "un-wrap" data from firebase using .val()
+    var message = msg.val()
+    var votes = message.votes
+    var user = msg.val().user
+    var id = msg.key
+    // create a <li> element
+    console.log(message, id)
+    var $li = $('<li>').text(message.message + ' - ' + user)
     
-      // Create up vote element
-      var $upVoteElement = $('<i class="fa fa-thumbs-up pull-right"></i>');
+    // Create up vote element
+    var $upVoteElement = $('<i class="fa fa-thumbs-up pull-right"></i>');
 
-      $upVoteElement.on('click', function () {
-        updateMessage(id, ++votes);
-      })
+    $upVoteElement.on('click', function () {
+      updateMessage(id, ++votes);
+    })
 
-      // Create down vote element
-      var $downVoteElement = $('<i class="fa fa-thumbs-down pull-right"></i>')
+    // Create down vote element
+    var $downVoteElement = $('<i class="fa fa-thumbs-down pull-right"></i>')
 
-      $downVoteElement.on('click', function () {
-        updateMessage(id, --votes);
-      })
+    $downVoteElement.on('click', function () {
+      updateMessage(id, --votes);
+    })
 
-      //create delete element 
-      var $deleteElement = $('<i class="fa fa-trash pull-right delete"></i>')
+    //create delete element 
+    var $deleteElement = $('<i class="fa fa-trash pull-right delete"></i>')
 
-      $deleteElement.on('click', function () {
-        deleteMessage(id);
-      })
+    $deleteElement.on('click', function () {
+      deleteMessage(id)
+    })
 
       $li.append($deleteElement)
       $li.append($downVoteElement)
@@ -199,15 +200,15 @@ ui.start('#firebaseui-auth-container', uiConfig)
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     $('#sign-in-container').hide()
-    $('#message-board-container').show()
     //only if a user is signed in, then show the map
     navigator.geolocation.getCurrentPosition(handleResponse)
     //only if user is signed in, then show this container
     $('#main').show()
+    $('#message-board-container').show()
   } else {
     $('#sign-in-container').show()
-    $('#message-board-container').hide()
     $('#main').hide()
+    $('#message-board-container').hide()
   }
 })
 
@@ -228,4 +229,11 @@ $('#return-to-top').click(function() {      // When arrow is clicked
     $('body,html').animate({
         scrollTop : 0                       // Scroll to top of body
     }, 500);
+});
+
+//paste this code under the head tag or in a separate js file.
+  // Wait for window load
+$(window).load(function() {
+  // Animate loader off screen
+   $(".se-pre-con").fadeOut("slow");;
 });
