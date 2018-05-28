@@ -128,8 +128,8 @@ function getUserMessages() {
     var user = msg.val().user
     var id = msg.key
     // create a <li> element
-    console.log(message, id)
-    var $li = $('<li>').text(message.message + ' - ' + user)
+    console.log(message, user, votes)
+    var $li = $('<li>').text(message + ' - ' + user);
     
     // Create up vote element
     var $upVoteElement = $('<i class="fa fa-thumbs-up pull-right"></i>');
@@ -139,7 +139,7 @@ function getUserMessages() {
     })
 
     // Create down vote element
-    var $downVoteElement = $('<i class="fa fa-thumbs-down pull-right"></i>')
+    var $downVoteElement = $('<i class="fa fa-thumbs-down pull-right"></i>');
 
     $downVoteElement.on('click', function () {
       updateMessage(id, --votes);
@@ -210,7 +210,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     $('#main').hide()
     $('#message-board-container').hide()
   }
-})
+});
 
 $('#sign-out').click(function() {
   firebase.auth().signOut()
