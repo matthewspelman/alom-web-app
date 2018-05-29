@@ -10,10 +10,6 @@ body {
 	text-align: center;
 }
 
-#sign-out-text {
-	color: white;
-}
-
 .stuck {
   position: fixed;
   top: 0;
@@ -177,10 +173,8 @@ body {
     width: 100%;
   }
 
-#sign-out-text {
+#sign-out {
 	color: white;
-	position: fixed;
-	right: 30px;
 }
 
 #map {
