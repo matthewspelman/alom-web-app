@@ -1,0 +1,46 @@
+[debug] [2018-06-10T20:14:06.938Z] ----------------------------------------------------------------------
+[debug] [2018-06-10T20:14:06.943Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy --token 1/TEX8_1O4i9xCxadEAxB9-YcMlz7hUsfer-TH1xtrxxg
+[debug] [2018-06-10T20:14:06.944Z] CLI Version:   3.18.2
+[debug] [2018-06-10T20:14:06.944Z] Platform:      win32
+[debug] [2018-06-10T20:14:06.944Z] Node Version:  v8.9.4
+[debug] [2018-06-10T20:14:06.945Z] Time:          Sun Jun 10 2018 16:14:06 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-10T20:14:06.945Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-10T20:14:06.976Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-10T20:14:06.977Z] > authorizing via --token option
+[debug] [2018-06-10T20:14:06.980Z] > refreshing access token with scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-10T20:14:06.980Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/TEX8_1O4i9xCxadEAxB9-YcMlz7hUsfer-TH1xtrxxg',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email openid https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase https://www.googleapis.com/auth/cloud-platform' } 
+ Sun Jun 10 2018 16:14:06 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-10T20:14:07.227Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-10T20:14:07.286Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/a-life-of-medita-1522891497708  
+  
+ Sun Jun 10 2018 16:14:07 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-10T20:14:07.821Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-10T20:14:07.824Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/a-life-of-medita-1522891497708/tokens  
+  
+ Sun Jun 10 2018 16:14:07 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-10T20:14:08.238Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'a-life-of-medita-1522891497708'...
+[info] 
+[info] i  deploying database, hosting
+[info] i  database: checking rules syntax...
+[debug] [2018-06-10T20:14:08.547Z] >>> HTTP REQUEST PUT https://a-life-of-medita-1522891497708.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": "true",
+    ".write": "true"
+  }
+} 
+ Sun Jun 10 2018 16:14:08 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-06-10T20:14:08.806Z] <<< HTTP RESPONSE 200
+[info] +  database: rules syntax for database a-life-of-medita-1522891497708 is valid
+[info] i  hosting: preparing public directory for upload...
+[debug] [2018-06-10T20:14:09.903Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/a-life-of-medita-1522891497708/uploads/-LEfKPMW6pE6Q7TFAlJC?fileCount=16&message=  
+  
+ Sun Jun 10 2018 16:14:09 GMT-0400 (Eastern Daylight Time)

@@ -123,32 +123,35 @@ function getUserMessages() {
 
   results.forEach(function (msg) {
     // "un-wrap" data from firebase using .val()
-    var message = msg.val()
-    var votes = message.votes
-    var user = msg.val().user
-    var id = msg.key
-    // create a <li> element
+    var msgObj = msg.val()
+    var message = msgObj.message
+    var votes = msgObj.votes
+    var user = msgObj.user
+    var id = msgObj.key
+    
+    console.log(msgObj)
     console.log(message, user, votes)
+    // create a <li> element
     var $li = $('<li>').text(message + ' - ' + user);
     
     // Create up vote element
-    var $upVoteElement = $('<i class="fa fa-thumbs-up pull-right"></i>');
+    var $upVoteElement = $('<i class="fa fa-thumbs-up pull-right">');
 
-    $upVoteElement.on('click', function () {
+    $upVoteElement.click(function () {
       updateMessage(id, ++votes);
     })
 
     // Create down vote element
-    var $downVoteElement = $('<i class="fa fa-thumbs-down pull-right"></i>');
+    var $downVoteElement = $('<i class="fa fa-thumbs-down pull-right">');
 
-    $downVoteElement.on('click', function () {
+    $downVoteElement.click(function () {
       updateMessage(id, --votes);
     })
 
     //create delete element 
-    var $deleteElement = $('<i class="fa fa-trash pull-right delete"></i>')
+    var $deleteElement = $('<i class="fa fa-trash pull-right delete">')
 
-    $deleteElement.on('click', function () {
+    $deleteElement.click(function () {
       deleteMessage(id)
     })
 
